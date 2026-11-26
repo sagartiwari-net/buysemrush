@@ -25,8 +25,11 @@ const canonical = new URL(canonicalPath, SITE.url).toString();
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.ico?v=3" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-32.png?v=3" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-48.png?v=3" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
+    <link rel="icon" type="image/webp" href="/favicon.webp?v=3" sizes="64x64" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.name} />
