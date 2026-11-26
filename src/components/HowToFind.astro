@@ -1,0 +1,42 @@
+---
+import SearchTagsGrid from './SearchTagsGrid.astro';
+import tagGroups from '../data/search-term-groups.json';
+
+const groups = tagGroups as Record<string, string[]>;
+const searchTermCount = Object.values(groups).reduce((n, tags) => n + tags.length, 0);
+---
+
+<section
+  id="find"
+  class="relative scroll-mt-24 border-b border-line/70 bg-canvas"
+  aria-labelledby="find-heading"
+>
+  <div class="container-page relative py-16 sm:py-20 lg:py-24">
+    <header class="max-w-3xl">
+      <p
+        class="text-xs font-bold tracking-[0.16em] text-brand-purple uppercase sm:text-sm"
+      >
+        Popular searches
+      </p>
+      <h2
+        id="find-heading"
+        class="mt-3 font-display text-3xl leading-tight font-extrabold tracking-tight text-ink sm:text-4xl"
+      >
+        How to Find BuySemrush?
+      </h2>
+      <p class="mt-4 text-base leading-relaxed text-body sm:text-lg">
+        Search Google for
+        <strong class="font-semibold text-ink">how to find buy semrush</strong>,
+        <strong class="font-semibold text-ink">semrush group buy</strong>,
+        <strong class="font-semibold text-ink">group buy semrush</strong>,
+        <strong class="font-semibold text-ink">semrush login</strong>, or
+        <strong class="font-semibold text-ink">buy semrush cheap</strong>. We serve users from
+        the United States, India, Brazil, Japan, Germany, Poland, Netherlands, and more —
+        <strong class="font-semibold text-ink">{searchTermCount} related keywords</strong> grouped
+        below for Semrush, Ahrefs, Envato, and Master Plan searches.
+      </p>
+    </header>
+
+    <SearchTagsGrid groups={groups} />
+  </div>
+</section>

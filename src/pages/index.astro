@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import MasterPlan from '../components/MasterPlan.astro';
+import ToolsGrid from '../components/ToolsGrid.astro';
+import HowToFind from '../components/HowToFind.astro';
+import FaqSection from '../components/FaqSection.astro';
+import FinalCta from '../components/FinalCta.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../lib/site';
+import { faqJsonLd } from '../lib/faq';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      name: SITE.name,
+      url: SITE.url,
+      description: SITE.description,
+    },
+    {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.url,
+    },
+    faqJsonLd(),
+  ],
+};
+---
+
+<BaseLayout>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <Header />
+  <main class="flex-1">
+    <Hero />
+    <HowItWorks />
+    <MasterPlan />
+    <ToolsGrid />
+    <HowToFind />
+    <FaqSection />
+    <FinalCta />
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,163 @@
+---
+import { SITE } from '../lib/site';
+import {
+  COUPON,
+  MASTER_PLANS,
+  PLAN_INCLUDES,
+  SEO_BLURBS,
+} from '../lib/content';
+---
+
+<section
+  id="plans"
+  class="relative scroll-mt-24 border-b border-line/70 bg-canvas"
+  aria-labelledby="plans-heading"
+>
+  <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+    <div
+      class="absolute -top-20 left-[-10%] h-72 w-72 rounded-full bg-brand-orange/15 blur-3xl"
+    >
+    </div>
+    <div
+      class="absolute right-[-8%] bottom-0 h-80 w-80 rounded-full bg-brand-blue/10 blur-3xl"
+    >
+    </div>
+  </div>
+
+  <div class="container-page relative py-16 sm:py-20 lg:py-24">
+    <header class="mx-auto max-w-2xl text-center">
+      <p
+        class="text-xs font-bold tracking-[0.16em] text-brand-purple uppercase sm:text-sm"
+      >
+        Semrush Group Buy Pricing
+      </p>
+      <h2
+        id="plans-heading"
+        class="mt-3 font-display text-3xl leading-tight font-extrabold tracking-tight text-ink sm:text-4xl"
+      >
+        Master Plan — buy Semrush tools without the full price
+      </h2>
+      <p class="mt-4 text-base leading-relaxed text-body sm:text-lg">
+        One Master Plan for <strong class="font-semibold text-ink">Semrush group buy</strong>,
+        Ahrefs, and 35+ premium tools. Official Guru-level research value — member pricing
+        from <strong class="font-semibold text-ink">$29.99/mo</strong>. Finish signup on
+        ToolsMandi.
+      </p>
+      <p
+        class="mt-5 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-brand-orange/30 bg-brand-orange/10 px-4 py-2 text-sm font-semibold text-ink"
+      >
+        <span>Coupon</span>
+        <code class="rounded-md bg-white px-2 py-0.5 font-mono text-brand-purple"
+          >{COUPON.code}</code
+        >
+        <span>· {COUPON.label} at checkout</span>
+      </p>
+    </header>
+
+    <!-- Pricing tiers -->
+    <div
+      class="mt-12 grid gap-5 sm:mt-14 lg:mt-16 lg:grid-cols-3 lg:items-stretch lg:gap-6"
+    >
+      {
+        MASTER_PLANS.map((plan) => (
+          <article
+            class:list={[
+              'relative flex flex-col rounded-2xl border bg-paper p-6 sm:p-7',
+              plan.featured
+                ? 'border-brand-orange/50 shadow-[0_24px_50px_-24px_rgb(245_158_11_/_0.65)] ring-1 ring-brand-orange/25 lg:-translate-y-1'
+                : 'border-line shadow-sm',
+            ]}
+          >
+            {plan.badge && (
+              <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-orange px-3 py-1 text-xs font-bold tracking-wide text-ink uppercase">
+                {plan.badge}
+              </span>
+            )}
+
+            <h3 class="font-display text-lg font-bold text-ink">{plan.label}</h3>
+            <p class="mt-1 text-sm text-body">{plan.note}</p>
+
+            <div class="mt-6 flex items-baseline gap-2">
+              <span class="font-display text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+                {plan.price}
+              </span>
+              {plan.period && (
+                <span class="text-base font-semibold text-body">{plan.period}</span>
+              )}
+            </div>
+            <p class="mt-2 text-sm text-body">
+              vs retail{' '}
+              <span class="line-through decoration-ink/30">{plan.retail}</span>
+              {' '}
+              Semrush Guru baseline
+            </p>
+
+            <ul class="mt-6 flex flex-1 flex-col gap-2.5 border-t border-line pt-6">
+              {PLAN_INCLUDES.map((item) => (
+                <li class="flex gap-2.5 text-sm leading-snug text-body">
+                  <span
+                    class="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-blue/10 text-xs font-bold text-brand-blue"
+                    aria-hidden="true"
+                  >
+                    ✓
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={plan.href}
+              class:list={[
+                'mt-8 inline-flex h-12 w-full items-center justify-center rounded-xl text-base font-bold transition-transform hover:-translate-y-0.5',
+                plan.featured
+                  ? 'bg-brand-orange text-ink shadow-[0_14px_36px_-14px_rgb(245_158_11_/_0.9)]'
+                  : 'border border-ink/10 bg-white text-ink hover:border-brand-blue/35',
+              ]}
+            >
+              Buy Semrush access
+            </a>
+          </article>
+        ))
+      }
+    </div>
+
+    <p class="mt-4 text-center text-sm text-body">
+      *Limits follow shared group-buy fair use so uptime stays high for every member.
+    </p>
+
+    <!-- Archive-proven SEO explainers (rewritten) -->
+    <div
+      class="mx-auto mt-14 grid max-w-4xl gap-10 border-t border-line pt-12 sm:mt-16 sm:gap-12 sm:pt-14 lg:grid-cols-2"
+    >
+      <div>
+        <h3 class="font-display text-xl font-bold tracking-tight text-ink">
+          What is Semrush?
+        </h3>
+        <p class="mt-3 text-sm leading-relaxed text-body sm:text-base">
+          {SEO_BLURBS.whatIsSemrush}
+        </p>
+      </div>
+      <div>
+        <h3 class="font-display text-xl font-bold tracking-tight text-ink">
+          What is Semrush group buy?
+        </h3>
+        <p class="mt-3 text-sm leading-relaxed text-body sm:text-base">
+          {SEO_BLURBS.whatIsGroupBuy}
+        </p>
+      </div>
+    </div>
+
+    <p class="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-body sm:text-base">
+      {SEO_BLURBS.whyCheap}
+      {' '}
+      Already a member?
+      <a
+        href={SITE.loginUrl}
+        class="font-semibold text-brand-blue-ink underline-offset-2 hover:underline"
+      >
+        Login on ToolsMandi
+      </a>.
+    </p>
+  </div>
+</section>

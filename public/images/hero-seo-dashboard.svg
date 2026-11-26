@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="40" y1="20" x2="520" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF2FF"/>
+      <stop offset=".45" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#FFF7ED"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="80" y1="50" x2="480" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F8FAFF"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#793BED"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#DA2779"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2563EB"/>
+      <stop offset=".5" stop-color="#793BED"/>
+      <stop offset="1" stop-color="#DA2779"/>
+    </linearGradient>
+    <filter id="blur18" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="blur8" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Outer plate: path guarantees equal radius on all 4 corners -->
+  <path d="M32,0 H528 A32,32 0 0 1 560,32 V388 A32,32 0 0 1 528,420 H32 A32,32 0 0 1 0,388 V32 A32,32 0 0 1 32,0 Z" fill="url(#bgGrad)"/>
+  <circle cx="480" cy="70" r="90" fill="#F59E0B" fill-opacity=".12"/>
+  <circle cx="70" cy="340" r="110" fill="#2563EB" fill-opacity=".1"/>
+  <circle cx="300" cy="40" r="60" fill="#793BED" fill-opacity=".08"/>
+
+  <!-- Shadow under card -->
+  <path d="M82,62 H478 A24,24 0 0 1 502,86 V330 A24,24 0 0 1 478,354 H82 A24,24 0 0 1 58,330 V86 A24,24 0 0 1 82,62 Z" fill="#12141C" fill-opacity=".11" filter="url(#blur18)"/>
+
+  <!-- Main white card -->
+  <path d="M72,48 H488 A24,24 0 0 1 512,72 V324 A24,24 0 0 1 488,348 H72 A24,24 0 0 1 48,324 V72 A24,24 0 0 1 72,48 Z" fill="url(#cardGrad)" stroke="#E4E7F0"/>
+
+  <circle cx="76" cy="72" r="5" fill="#DA2779"/>
+  <circle cx="94" cy="72" r="5" fill="#F59E0B"/>
+  <circle cx="112" cy="72" r="5" fill="#22C55E"/>
+  <rect x="140" y="64" width="220" height="16" rx="8" ry="8" fill="#EEF2FF"/>
+  <text x="152" y="76" fill="#5C6478" font-family="system-ui,sans-serif" font-size="10" font-weight="600">buysemrush.com / seo toolkit</text>
+
+  <rect x="68" y="98" width="200" height="228" rx="16" ry="16" fill="#FFFFFF" stroke="#E4E7F0"/>
+  <text x="84" y="126" fill="#12141C" font-family="system-ui,sans-serif" font-size="13" font-weight="700">Keyword research</text>
+  <rect x="84" y="138" width="168" height="28" rx="10" ry="10" fill="#F6F7FB" stroke="#E4E7F0"/>
+  <circle cx="100" cy="152" r="7" stroke="#793BED" stroke-width="2" fill="none"/>
+  <path d="M105 157l6 6" stroke="#793BED" stroke-width="2" stroke-linecap="round"/>
+  <text x="116" y="156" fill="#5C6478" font-family="system-ui,sans-serif" font-size="11">semrush group buy</text>
+
+  <g font-family="system-ui,sans-serif">
+    <rect x="84" y="180" width="168" height="36" rx="10" ry="10" fill="#EEF2FF"/>
+    <text x="96" y="196" fill="#12141C" font-size="11" font-weight="600">buy semrush</text>
+    <text x="96" y="210" fill="#5C6478" font-size="9">Vol 2.4k · KD 18</text>
+    <rect x="208" y="190" width="32" height="16" rx="8" ry="8" fill="#2563EB"/>
+    <text x="214" y="201" fill="#FFFFFF" font-size="9" font-weight="700">#3</text>
+
+    <rect x="84" y="224" width="168" height="36" rx="10" ry="10" fill="#F6F7FB"/>
+    <text x="96" y="240" fill="#12141C" font-size="11" font-weight="600">cheap semrush</text>
+    <text x="96" y="254" fill="#5C6478" font-size="9">Vol 1.1k · KD 12</text>
+    <rect x="208" y="234" width="32" height="16" rx="8" ry="8" fill="#793BED"/>
+    <text x="214" y="245" fill="#FFFFFF" font-size="9" font-weight="700">#1</text>
+
+    <rect x="84" y="268" width="168" height="36" rx="10" ry="10" fill="#FFF7ED"/>
+    <text x="96" y="284" fill="#12141C" font-size="11" font-weight="600">ahrefs tools</text>
+    <text x="96" y="298" fill="#5C6478" font-size="9">Vol 890 · KD 22</text>
+    <rect x="208" y="278" width="32" height="16" rx="8" ry="8" fill="#F59E0B"/>
+    <text x="214" y="289" fill="#12141C" font-size="9" font-weight="700">#5</text>
+  </g>
+
+  <rect x="284" y="98" width="208" height="124" rx="16" ry="16" fill="#FFFFFF" stroke="#E4E7F0"/>
+  <text x="300" y="122" fill="#12141C" font-family="system-ui,sans-serif" font-size="13" font-weight="700">Rank tracking</text>
+  <text x="420" y="122" fill="#16A34A" font-family="system-ui,sans-serif" font-size="11" font-weight="700">+12</text>
+
+  <g transform="translate(300 132)">
+    <rect x="0" y="48" width="22" height="38" rx="6" ry="6" fill="url(#barGrad)" fill-opacity=".35"/>
+    <rect x="34" y="36" width="22" height="50" rx="6" ry="6" fill="url(#barGrad)" fill-opacity=".5"/>
+    <rect x="68" y="24" width="22" height="62" rx="6" ry="6" fill="url(#barGrad)" fill-opacity=".65"/>
+    <rect x="102" y="14" width="22" height="72" rx="6" ry="6" fill="url(#barGrad)" fill-opacity=".8"/>
+    <rect x="136" y="4" width="22" height="82" rx="6" ry="6" fill="url(#barGrad)"/>
+  </g>
+
+  <rect x="284" y="234" width="208" height="92" rx="16" ry="16" fill="#FFFFFF" stroke="#E4E7F0"/>
+  <text x="300" y="258" fill="#12141C" font-family="system-ui,sans-serif" font-size="13" font-weight="700">Organic traffic</text>
+  <text x="430" y="258" fill="#DA2779" font-family="system-ui,sans-serif" font-size="12" font-weight="700">+38%</text>
+  <path d="M300 300 C330 298, 345 282, 370 274 C395 266, 415 288, 440 278 C455 272, 465 262, 476 256" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <circle cx="476" cy="256" r="5" fill="#DA2779"/>
+
+  <!-- Chips clear of bottom-right card corner -->
+  <rect x="22" y="180" width="86" height="34" rx="17" ry="17" fill="#793BED" fill-opacity=".16" filter="url(#blur8)"/>
+  <rect x="18" y="172" width="86" height="34" rx="17" ry="17" fill="#FFFFFF" stroke="#E4E7F0"/>
+  <circle cx="36" cy="189" r="8" fill="url(#accentGrad)"/>
+  <text x="50" y="193" fill="#12141C" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Semrush</text>
+
+  <rect x="434" y="40" width="78" height="34" rx="17" ry="17" fill="#793BED" fill-opacity=".16" filter="url(#blur8)"/>
+  <rect x="430" y="32" width="78" height="34" rx="17" ry="17" fill="#FFFFFF" stroke="#E4E7F0"/>
+  <circle cx="448" cy="49" r="8" fill="#F59E0B"/>
+  <text x="462" y="53" fill="#12141C" font-family="system-ui,sans-serif" font-size="11" font-weight="700">Ahrefs</text>
+
+  <rect x="330" y="378" width="112" height="34" rx="17" ry="17" fill="#793BED" fill-opacity=".16" filter="url(#blur8)"/>
+  <rect x="326" y="370" width="112" height="34" rx="17" ry="17" fill="#FFFFFF" stroke="#E4E7F0"/>
+  <rect x="340" y="380" width="14" height="14" rx="3" ry="3" fill="#793BED"/>
+  <text x="360" y="391" fill="#12141C" font-family="system-ui,sans-serif" font-size="11" font-weight="700">35+ tools</text>
+</svg>

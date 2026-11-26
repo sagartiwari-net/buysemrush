@@ -1,0 +1,32 @@
+---
+interface Props {
+  groups: Record<string, string[]>;
+}
+
+const { groups } = Astro.props;
+const entries = Object.entries(groups);
+const total = entries.reduce((n, [, tags]) => n + tags.length, 0);
+---
+
+<div class="mt-8 sm:mt-10" aria-label={`${total} popular BuySemrush search keywords`}>
+  <div class="columns-1 gap-3 sm:columns-2 sm:gap-3.5 xl:columns-3">
+    {
+      entries.map(([category, tags]) => (
+        <article class="mb-3 break-inside-avoid rounded-[14px] border border-line bg-paper p-3.5 shadow-[0_6px_18px_rgba(18,20,28,0.035)] sm:mb-3.5 sm:p-4">
+          <h3 class="text-xs font-bold tracking-[0.12em] text-brand-purple uppercase">
+            {category}
+          </h3>
+          <ul class="mt-2.5 flex flex-wrap gap-1.5">
+            {tags.map((term) => (
+              <li>
+                <span class="inline-flex rounded-full border border-line bg-white px-2.5 py-1 text-xs leading-4 text-ink/75">
+                  {term}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</div>

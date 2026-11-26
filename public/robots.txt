@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://buysemrush.com/sitemap-index.xml

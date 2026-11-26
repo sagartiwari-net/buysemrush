@@ -1,0 +1,62 @@
+---
+import { SITE } from '../lib/site';
+import { COUPON } from '../lib/content';
+---
+
+<section
+  id="get-access"
+  class="relative scroll-mt-24 overflow-hidden border-b border-line/70"
+  aria-labelledby="cta-heading"
+>
+  <div class="pointer-events-none absolute inset-0 bg-canvas" aria-hidden="true">
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-brand-blue/10 via-brand-purple/8 to-brand-orange/15"
+    >
+    </div>
+    <div
+      class="absolute -top-24 left-[-10%] h-72 w-72 rounded-full bg-brand-blue/15 blur-3xl"
+    >
+    </div>
+    <div
+      class="absolute right-[-8%] -bottom-28 h-80 w-80 rounded-full bg-brand-orange/20 blur-3xl"
+    >
+    </div>
+  </div>
+
+  <div class="container-page relative py-16 text-center sm:py-20 lg:py-24">
+    <p
+      class="text-xs font-bold tracking-[0.16em] text-brand-purple uppercase sm:text-sm"
+    >
+      Ready when you are
+    </p>
+    <h2
+      id="cta-heading"
+      class="mx-auto mt-3 max-w-2xl font-display text-3xl leading-tight font-extrabold tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]"
+    >
+      Start your Semrush group buy today
+    </h2>
+    <p class="mx-auto mt-4 max-w-xl text-base leading-relaxed text-body sm:text-lg">
+      Master Plan from <strong class="font-semibold text-ink">$29.99/mo</strong> — Semrush, Ahrefs,
+      and 35+ tools. Use coupon
+      <code class="rounded-md bg-white px-1.5 py-0.5 font-mono text-sm font-semibold text-brand-purple"
+        >{COUPON.code}</code
+      >
+      for {COUPON.label} at ToolsMandi checkout.
+    </p>
+
+    <div class="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:justify-center">
+      <a
+        href={SITE.signupUrl}
+        class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-orange px-7 text-base font-bold text-ink shadow-[0_14px_36px_-14px_rgb(245_158_11_/_0.9)] transition-transform hover:-translate-y-0.5 sm:w-auto"
+      >
+        Semrush Sign Up
+      </a>
+      <a
+        href={SITE.loginUrl}
+        class="inline-flex h-12 w-full items-center justify-center rounded-xl border border-ink/10 bg-white px-7 text-base font-semibold text-ink transition-colors hover:border-brand-blue/35 sm:w-auto"
+      >
+        Semrush Login
+      </a>
+    </div>
+  </div>
+</section>

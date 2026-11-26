@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+/* Self-hosted — Outfit (display) + DM Sans (body). Not Syne/Kanit. */
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500 800;
+  font-display: optional;
+  src: url("/fonts/outfit-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url("/fonts/dm-sans-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: optional;
+  src: url("/fonts/dm-sans-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: optional;
+  src: url("/fonts/dm-sans-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: url("/fonts/dm-sans-latin-700-normal.woff2") format("woff2");
+}
+
+@theme {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Logo palette */
+  --color-brand-blue: #2563eb;
+  /* Darker blue for body links on light surfaces (WCAG AA) */
+  --color-brand-blue-ink: #1d4ed8;
+  --color-brand-purple: #793bed;
+  --color-brand-magenta: #da2779;
+  --color-brand-orange: #f59e0b;
+
+  --color-ink: #12141c;
+  --color-body: #5c6478;
+  --color-paper: #ffffff;
+  --color-canvas: #f6f7fb;
+  --color-line: #e4e7f0;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-canvas font-sans text-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-brand-orange) 35%, white);
+  }
+}
+
+@layer utilities {
+  .text-brand-gradient {
+    background-image: linear-gradient(
+      105deg,
+      var(--color-brand-blue) 0%,
+      var(--color-brand-purple) 36%,
+      var(--color-brand-magenta) 68%,
+      var(--color-brand-orange) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-brand-gradient {
+    background-image: linear-gradient(
+      105deg,
+      var(--color-brand-blue) 0%,
+      var(--color-brand-purple) 36%,
+      var(--color-brand-magenta) 68%,
+      var(--color-brand-orange) 100%
+    );
+  }
+
+  .hero-wash {
+    background:
+      radial-gradient(ellipse 90% 70% at 8% 0%, rgb(37 99 235 / 0.16), transparent 58%),
+      radial-gradient(ellipse 70% 55% at 92% 8%, rgb(245 158 11 / 0.18), transparent 52%),
+      radial-gradient(ellipse 55% 45% at 60% 100%, rgb(218 39 121 / 0.07), transparent 55%),
+      linear-gradient(180deg, #fbfcff 0%, #f4f6fb 48%, var(--color-canvas) 100%);
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-safe-fade {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.motion-safe-fade {
+  animation: hero-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
