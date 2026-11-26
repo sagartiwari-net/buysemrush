@@ -28,4 +28,4 @@ pnpm-debug.log*
 
 # research exports (not needed on server)
 *.csv
-BuySemrushLogo.svg
+/BuySemrushLogo.svg
