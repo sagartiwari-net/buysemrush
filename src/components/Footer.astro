@@ -17,15 +17,18 @@ const year = new Date().getFullYear();
     <div class="grid gap-10 md:grid-cols-[1.35fr_1fr_1fr] md:gap-12">
       <div>
         <a href="/" class="inline-flex items-center" aria-label={`${SITE.name} home`}>
-          <img
-            src="/BuySemrushLogo.svg"
-            alt={SITE.name}
-            width="160"
-            height="36"
-            class="h-9 w-auto"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="/images/logo-header.webp" type="image/webp" />
+            <img
+              src="/images/logo-header.png"
+              alt={SITE.name}
+              width="160"
+              height="36"
+              class="h-9 w-auto"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </a>
         <p class="mt-4 max-w-sm text-sm leading-relaxed text-body">
           Affordable Semrush group buy access for SEO freelancers, agencies, and teams — plus

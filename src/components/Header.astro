@@ -5,14 +5,18 @@ import { SITE } from '../lib/site';
 <header class="sticky top-0 z-40 border-b border-line/60 bg-canvas/80 backdrop-blur-xl">
   <div class="container-page flex h-[4.25rem] items-center justify-between gap-4">
     <a href="/" class="flex shrink-0 items-center" aria-label={`${SITE.name} home`}>
-      <img
-        src="/BuySemrushLogo.svg"
-        alt={SITE.name}
-        width="176"
-        height="40"
-        class="h-10 w-auto"
-        decoding="async"
-      />
+      <picture>
+        <source srcset="/images/logo-header.webp" type="image/webp" />
+        <img
+          src="/images/logo-header.png"
+          alt={SITE.name}
+          width="176"
+          height="40"
+          class="h-10 w-auto"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
     </a>
 
     <nav

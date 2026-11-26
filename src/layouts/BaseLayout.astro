@@ -41,7 +41,7 @@ const canonical = new URL(canonicalPath, SITE.url).toString();
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL('/images/og-cover.jpg', SITE.url).toString()} />
 
-    <!-- Preload display font for hero LCP text -->
+    <!-- Preload critical fonts (1 display + 1 variable body = shorter critical chain) -->
     <link
       rel="preload"
       href="/fonts/outfit-latin-wght-normal.woff2"
@@ -51,10 +51,17 @@ const canonical = new URL(canonicalPath, SITE.url).toString();
     />
     <link
       rel="preload"
-      href="/fonts/dm-sans-latin-400-normal.woff2"
+      href="/fonts/dm-sans-latin-wght-normal.woff2"
       as="font"
       type="font/woff2"
       crossorigin
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/logo-header.webp"
+      type="image/webp"
+      fetchpriority="high"
     />
     <link
       rel="preload"
